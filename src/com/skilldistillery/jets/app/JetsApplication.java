@@ -2,6 +2,8 @@ package com.skilldistillery.jets.app;
 
 import java.util.Scanner;
 
+import com.skilldistillery.jets.entities.AirField;
+
 public class JetsApplication {
 	private AirField airField = new AirField();
 	private static Scanner input;
