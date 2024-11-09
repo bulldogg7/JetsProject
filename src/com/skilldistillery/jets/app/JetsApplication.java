@@ -19,9 +19,9 @@ public class JetsApplication {
 		Scanner input = new Scanner(System.in);
 		private AirField airfield = new AirField();
 		
-		boolean exit = false;
+		boolean running = true;
 		
-		do {
+		while (running) {
 			menuOptions();
 			String selection = input.next();
 
@@ -30,38 +30,36 @@ public class JetsApplication {
 				airfield.listFleet();
 				break;
 			case "2":
-				airfield.listFleet();
+				airfield.fly();
 				break;
 			case "3":
-				airfield.listFleet();
+				airfield.viewFastestJet();
 				break;
 			case "4":
-				airfield.listFleet();
+				airfield.viewLongestRange();
 				break;
 			case "5":
-				airfield.listFleet();
+				airfield.loadCargo();
 				break;
 			case "6":
-				airfield.listFleet();
+				airfield.engageFight();
 				break;
 			case "7":
-				airfield.listFleet();
+				airfield.addJet();
 				break;
 			case "8":
-				airfield.listFleet();
+				airfield.removeJet();
 				break;
 			case "9":
-				exit = true;
+				running = false;
+				System.out.println("Thanks for Flying With Cloud & Cid Airlines!");
 				break;
-				default: System.out.println("Invalid Choice; Try Again");
+			default: System.out.println("Invalid Choice; Try Again");
 			} 
-		}	while (exit == false);
-				System.out.println("Y'all Come Back Now Ya' Hear?!");
-				input.close();
-}
-}
+			input.close();
+}				
 
-	public static void menuOptions() {
+	public static menuOptions() {
 		System.out.println();
 		System.out.println("******************************************");
 		System.out.println("|| 1) List Fleet    					||");
@@ -76,4 +74,5 @@ public class JetsApplication {
 		System.out.println("******************************************");
 		System.out.println("         What Would You Like To Do?");
 	}
+}
 }
