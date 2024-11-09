@@ -33,6 +33,8 @@
 	- Corrected class misspelling of "Invicible" to "Invincible" that was causing errors
 	- Started with a do/while loop, but ran into unforeseen errors I couldn't fix so
 	  I changed it to a while loop
+	- Had array field numbers incorrect to where it was displaying 2 MPH and no price
+	- Fixed error of a comma in one of the prices; deleted the comma
 	 
 ## Difficulties Encountered
 	- 

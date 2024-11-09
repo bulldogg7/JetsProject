@@ -1,19 +1,24 @@
 package com.skilldistillery.jets.entities;
 
+import java.text.DecimalFormat;
+
 public abstract class Jet {
+	DecimalFormat twoDecimals = new DecimalFormat("0.00");
+	DecimalFormat noDecimals = new DecimalFormat("0");
+	DecimalFormat commas = new DecimalFormat("#,###");
 
 	// Fields
 	protected String model;
 	protected int speedInMph;
 	protected int range;
-	protected long price;
+	protected double price;
 
 	// No Argument Constructor
 	public Jet() {
 	}
 
 	// Constructor
-	public Jet(String model, int speedInMph, int range, long price) {
+	public Jet(String model, int speedInMph, int range, double price) {
 		super();
 		this.model = model;
 		this.speedInMph = speedInMph;
@@ -43,29 +48,34 @@ public abstract class Jet {
 	public double getPrice() {
 		return price;
 	}
-	public void setPrice(long price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
-	
+	public double getSpeedInMach() {
+		double speedInMach = speedInMph / 750.0;
+		return speedInMach;
+	}
+
 	// Methods
-	public void fly() {
-		double flyTime = range/speedInMph;
+	public void flyJets() {
+		double flightTimeRange = range / speedInMph;
 		// Override in Each Subclass
 		if (range == 0 || speedInMph == 0) {
 			System.out.println("This Aircraft is Grounded!");
 		} else {
-				System.out.println(getModel() + " is Flying & has a Flight Capacity of " + flyTime);
-			}
+			System.out.println(getModel() + " is Flying. It has a Max Speed of " + commas.format(speedInMph) 
+								+ " MPH or Mach "	+ (twoDecimals.format(getSpeedInMach()) 
+								+ ". It has a Range of " + commas.format(range) + " Miles. It's Price is $"
+								+ (commas.format(price))) + ". It has a Flight Time Range of "
+								+ noDecimals.format(flightTimeRange) + " Hour(s).");
 		}
-	public double getSpeedInMach() {
-		double speedInMach = speedInMph/750;
-		return speedInMach;
 	}
 
 	// toString Last
 	@Override
 	public String toString() {
-		return "Jet [model=" + model + ", speedInMph=" + speedInMph 
-				+ ", range=" + range + ", price=" + price + "]";
+		return "Jet: " + model + " - Max Speed: " + commas.format(speedInMph) + " MPH or Mach "
+				+ (twoDecimals.format(getSpeedInMach()) + " - Range: " + commas.format(range) + " Miles - Price: $"
+						+ (commas.format(price)));
 	}
 }
