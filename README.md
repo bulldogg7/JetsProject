@@ -15,17 +15,12 @@
 	- Git/GitHub
 	- MacOS Terminal
 	- UML Diagrams
-
+	
 ## Lessons Learned
 	- Always commit your work so that it saves
 	- Used & re-inforced learning classes & subclasses
 	- Used multiple classes to run the program
 	- Used getters & setters, fields, constructors, polymorphism, & toStrings
-
-## To Run the Program
-	-
-	_
-	-
 
 ## Changes Made
 	- Refined User Experience with verbiage and formatting
@@ -35,8 +30,9 @@
 	  I changed it to a while loop
 	- Had array field numbers incorrect to where it was displaying 2 MPH and no price
 	- Fixed error of a comma in one of the prices; deleted the comma
-	- Added an "if" statement for if there are no airships left to remove that I didn't originally have
+	- Added an "if" statement for if there are no airships left to remove
 	- Added decimal formatting to clean up outputs & solve rounding errors in mach
+	- Added photos of the Final Fantasy Airships used for the project
 	 
 ## Difficulties Encountered
 	- Adding & removing airships were WAY more involved than I expected
