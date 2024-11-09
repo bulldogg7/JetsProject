@@ -49,13 +49,17 @@ public abstract class Jet {
 	
 	// Methods
 	public void fly() {
+		double flyTime = range/speedInMph;
 		// Override in Each Subclass
-		System.out.println(this.model + " is Flying!"); // FIXME
-	}
+		if (range == 0 || speedInMph == 0) {
+			System.out.println("This Aircraft is Grounded!");
+		} else {
+				System.out.println(getModel() + " is Flying & has a Flight Capacity of " + flyTime);
+			}
+		}
 	public double getSpeedInMach() {
-		// TODO MPH to Mach Conversion
-		// No Need to Override
-		return 0.0;
+		double speedInMach = speedInMph/750;
+		return speedInMach;
 	}
 
 	// toString Last

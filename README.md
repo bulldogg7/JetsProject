@@ -29,7 +29,10 @@
 
 ## Changes Made
 	- Refined User Experience with verbiage and formatting
-	- 
+	- Changed "double" for price to "long" & all corresponding class instances of "double"
+	- Corrected class misspelling of "Invicible" to "Invincible" that was causing errors
+	- Started with a do/while loop, but ran into unforeseen errors I couldn't fix so
+	  I changed it to a while loop
 	 
 ## Difficulties Encountered
 	- 
