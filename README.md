@@ -35,6 +35,9 @@
 	  I changed it to a while loop
 	- Had array field numbers incorrect to where it was displaying 2 MPH and no price
 	- Fixed error of a comma in one of the prices; deleted the comma
+	- Added an "if" statement for if there are no airships left to remove that I didn't originally have
+	- Added decimal formatting to clean up outputs & solve rounding errors in mach
 	 
 ## Difficulties Encountered
-	- 
+	- Adding & removing airships were WAY more involved than I expected
+	- Encountered problems with rounding for speed in mach & other decimal formatting

@@ -10,7 +10,7 @@ public abstract class Jet {
 	// Fields
 	protected String model;
 	protected int speedInMph;
-	protected int range;
+	protected double range;
 	protected double price;
 
 	// No Argument Constructor
@@ -18,7 +18,7 @@ public abstract class Jet {
 	}
 
 	// Constructor
-	public Jet(String model, int speedInMph, int range, double price) {
+	public Jet(String model, int speedInMph, double range, double price) {
 		super();
 		this.model = model;
 		this.speedInMph = speedInMph;
@@ -39,10 +39,10 @@ public abstract class Jet {
 	public void setSpeedInMph(int speedInMph) {
 		this.speedInMph = speedInMph;
 	}
-	public int getRange() {
+	public double getRange() {
 		return range;
 	}
-	public void setRange(int range) {
+	public void setRange(double range) {
 		this.range = range;
 	}
 	public double getPrice() {
@@ -63,11 +63,13 @@ public abstract class Jet {
 		if (range == 0 || speedInMph == 0) {
 			System.out.println("This Aircraft is Grounded!");
 		} else {
-			System.out.println(getModel() + " is Flying. It has a Max Speed of " + commas.format(speedInMph) 
-								+ " MPH or Mach "	+ (twoDecimals.format(getSpeedInMach()) 
-								+ ". It has a Range of " + commas.format(range) + " Miles. It's Price is $"
-								+ (commas.format(price))) + ". It has a Flight Time Range of "
-								+ noDecimals.format(flightTimeRange) + " Hour(s).");
+			System.out.println(getModel() + " is Flying:");
+			System.out.println("Max Speed: " + commas.format(speedInMph) 
+			+ " MPH or Mach " + (twoDecimals.format(getSpeedInMach())));
+			System.out.println("Range: " + commas.format(range) + " Miles");
+			System.out.println("Price: " + (commas.format(price)) + " Gil");
+			System.out.println("Flight Time Range: " + twoDecimals.format(flightTimeRange) + " Hour(s)");
+			System.out.println();
 		}
 	}
 
@@ -75,7 +77,7 @@ public abstract class Jet {
 	@Override
 	public String toString() {
 		return "Jet: " + model + " - Max Speed: " + commas.format(speedInMph) + " MPH or Mach "
-				+ (twoDecimals.format(getSpeedInMach()) + " - Range: " + commas.format(range) + " Miles - Price: $"
-						+ (commas.format(price)));
+				+ (twoDecimals.format(getSpeedInMach()) + " - Range: " + commas.format(range) + " Miles - Price: "
+						+ (commas.format(price)) + " Gil");
 	}
 }

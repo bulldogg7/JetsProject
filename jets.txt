@@ -1,3 +1,5 @@
-cargo, Cid Highwind, 200, 4000, 800000.0
-fighter, Esthar Ragnarok, 1200, 1800, 100000000.0
-passenger, Garland Invincible, 700, 2000, 2000000.0
+Cargo, Cid Highwind 5, 500, 7000, 2500000.0
+Cargo, Spira Fahrenheit, 200, 8000, 3750000.0
+Fighter, Esthar Ragnarok, 2000, 4000, 100000000.0
+Fighter, YPA Strahl, 2200, 1500, 80000000.0
+Passenger, Garland Invincible, 700, 2000, 4500000.0
