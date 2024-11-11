@@ -6,6 +6,6 @@ public class Cargo extends Jet implements CargoCarrier {
 	}
 	
 	public void loadCargo() {
-		System.out.println("Cargo Has Been Loaded onto the " + this.model);
+		System.out.println("Cargo Has Been Loaded Onto the " + this.model);
 	}
 }

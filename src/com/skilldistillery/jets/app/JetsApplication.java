@@ -26,10 +26,11 @@ public class JetsApplication {
 				System.out.println("|| 3) View Fastest Jet  		||");
 				System.out.println("|| 4) View Jet With the Longest Range	||");
 				System.out.println("|| 5) Load All Cargo Jets   		||");
-				System.out.println("|| 6) Dogfight!    			||");
-				System.out.println("|| 7) Add a Jet to the Fleet  		||");
-				System.out.println("|| 8) Remove a Jet From the Fleet	||");
-				System.out.println("|| 9) Quit the Program 			||");
+				System.out.println("|| 6) Board Passengers    		||");
+				System.out.println("|| 7) Dogfight!    			||");
+				System.out.println("|| 8) Add a Jet to the Fleet  		||");
+				System.out.println("|| 9) Remove a Jet From the Fleet	||");
+				System.out.println("|| 10) Quit the Program 		||");
 				System.out.println("******************************************");
 				System.out.println("         What Would You Like To Do?");
 				String selection = input.next();
@@ -56,22 +57,26 @@ public class JetsApplication {
 					break;
 				case "6":
 					System.out.println();
-					airfield.engageFight();
+					airfield.boardPassengers();
 					break;
 				case "7":
 					System.out.println();
-					airfield.addJet();
+					airfield.engageFight();
 					break;
 				case "8":
 					System.out.println();
-					airfield.removeJet();
+					airfield.addJet();
 					break;
 				case "9":
+					System.out.println();
+					airfield.removeJet();
+					break;
+				case "10":
 					running = false;
 					System.out.println("Thanks for Flying With Cloud & Cid Airlines!");
 					break;
 				default:
-					System.out.println("Invalid Choice, Your Airship Crashed! Try Again");
+					System.err.println("Invalid Choice, Your Airship Crashed! Try Again");
 					}
 				}
 		} while (true);

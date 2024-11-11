@@ -82,8 +82,9 @@ public class Airfield {
 				fastestJet = jet;
 			}
 		}
-		System.out.println("The Fastest Jet is the " + (fastestJet) + ", Whose Speed is " + commas.format(fastestSpeed)
-				+ " MPH or Mach " + (twoDecimals.format(fastestSpeed / 750.0)) + "!");
+		System.out.println("The Fastest Jet is the " + (fastestJet) + ", Whose Speed is " 
+				+ commas.format(fastestSpeed) + " MPH or Mach " 
+				+ (twoDecimals.format(fastestSpeed / 750.0)) + "!");
 	}
 	public void viewLongestRange() {
 		Jet longevityJet = null;
@@ -101,6 +102,13 @@ public class Airfield {
 		for (Jet jet : fleet) {
 			if (jet instanceof Cargo) {
 				((Cargo) jet).loadCargo();
+			}
+		}
+	}
+	public void boardPassengers() {
+		for (Jet jet : fleet) {
+			if (jet instanceof Passenger) {
+				((Passenger) jet).boardPassengers();
 			}
 		}
 	}
@@ -155,7 +163,7 @@ public class Airfield {
 			System.out.println();
 			System.out.println("Your Airship Has Been Added to the Fleet!");
 		} catch (InputMismatchException e) {
-			System.out.println("Invalid Input! Your Airship Crashed! Try Again!");
+			System.err.println("Invalid Input! Your Airship Crashed! Try Again!");
 			input.nextLine();
 			}
 		}
@@ -173,15 +181,15 @@ public class Airfield {
 				fleet.remove(selection - 1);
 			} if(fleet.size() == 0) {
 				System.out.println();
-				System.out.println("There Are No Airships Left!");
+				System.err.println("There Are No Airships Left!");
 				input.nextLine();
 			}
 			else {
-				System.out.println("Invalid Choice! You Broke the Airfield!");
+				System.err.println("Invalid Choice! You Broke the Airfield!");
 			}
 		}
 		catch (InputMismatchException e) {
-	System.out.println("Invalid Input! Your Airship Crashed! Try Again!");
+	System.err.println("Invalid Input! Your Airship Crashed! Try Again!");
 	input.nextLine();
 		}
 	}
